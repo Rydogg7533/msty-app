@@ -113,3 +113,6 @@ with tabs[4]:
         yag = yagmail.SMTP("your@gmail.com", oauth2_file="credentials.json")
         yag.send(to="your@gmail.com", subject="MSTY Report", contents="Attached", attachments=pdf_output)
         st.success("Report emailed!")
+import subprocess
+st.subheader("🔍 Installed Packages (for debugging only)")
+st.text(subprocess.getoutput('pip freeze'))
